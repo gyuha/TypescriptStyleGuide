@@ -334,16 +334,247 @@ element.addEventListener('click', (ev: Event) => {
 
 ## 작명 (Names)
 
-- 모든 변수 및 함수 이름은 영숫자 A-Z, a-z, 0-9 및 밑줄 _ 문자로 구성되어야합니다.
+- 모든 변수 및 함수 이름은 영숫자 `A-Z`, `a-z`, `0-9` 및 밑줄 `_` 문자로 구성되어야합니다.
+
+### 변수(Variables), 모듈(Modules), 함수(Functions) 명
+
+- 변수, 모듈, 함수 명에는 카멜케이스(lowerCamelCase)를 사용합니다.
+  - 소문자로 시작하고 복합어일 경우에는 중간에 새로운 단어의 첫자는 대문자로 표기합니다.
+  - 예) `newWorld`, `testDriver`, `helloWorld`
+
+### 변수 선언
+
+- `var`은 사용하지 않습니다.
+- 값이 변경되지 않는 경우에는 `const`사용합니다.
+- 그외 경우에는 `let`을 사용합니다.
+
+### 타입 (Types)
+
+- 되도록이면 항상 형식 선언을 해 줍니다.
+- 함수를 선언 할 때 되도록이면 반환하는 형식을 선업해 줍니다.
+- 배열은 `Array<type>` 대신 `type[]`형식으로 사용합니다.
+
+```typescript
+// ✋ 나쁨
+let numbers = [];
+
+// ✋ 나쁨
+let numbers: Array<number> = [];
+
+// 👍 좋음
+let numbers: number[] = [];
+```
+
+- `any`의 사용을 자제하며, 되도록이면 interface를 만들어서 사용해 줍니다.
+
+### 클래스 (Classes)
+
+* 클래스명은 파스칼케이싱(Pascal Casing)을 사용합니다.
+  * 대문자로 시작하고 복합어일 경우에는 중간에 새로운 단어의 첫자는 대문자로 표기합니다.
+  * 예) `NewWorld`, `TestDriver`, `HelloWorld` 
+* 메서드의 상단에는 1줄 이상의 빈줄을 추가합니다.
+* public 인스턴스 멤버는 다른 파트의 어플리케이션에서 사용하는 경우에만 사용하십시오.
+
+```typescript
+class Rect {
+  private _width : number;
+  private _height: number;
+    
+  constructor(width: number, height: number) {
+    this._width  = width;
+    this._height = height;
+  }
+    
+  public set width(width: number) {
+    this._width = width; 
+  }
+}
+```
+
+### 인터페이스 (Interfaces)
+
+- 인터페이스는 파스칼케이스(PascalCase)를 사용합니다.
+- 인터페이스의 대문자 `I`를 프리픽스로 사용합니다. 프리픽스를 사용하는 이유는 클래스와 인터페이스를 구분하기 위해서 입니다.
+- 인터페이스는 public 멤버만을 사용하며, `protected`와 `private` 멤버에서는 사용하지 않습니다.
+
+```typescript
+interface IPerson {
+    firstName: string;
+    lastName: string;
+    toString(): string;
+}
+```
 
 
 
-### 클래스 (Class)
+## 표현법 (Statements)
 
-클래스명은 파스칼케이싱(Pascal Casing)을 사용합니다.
+### 단순 표현
 
-* 대문자로 시작하고 복합어일 경우에느 중간에 새로운 단어는 대문자로 표기합니다.
-* 예) `NewWorld`, `TestDriver`, `HelloWorld` 
+- 모든 문장의 뒤에는 세미콜론(`;`)을 넣어 줍니다. 
+
+``` typescript
+// ✋ 나쁨
+alert('hello')
+
+// 👍 좋음
+alert('hello');
+```
+
+### 복합문 (Compound)
+
+- `{}`로 둘러싸인 문장의 목록
+  - 둘러싸인 문장은 새로운 라인으로 시작 합니다.
+
+```typescript
+// ✋ 나쁨
+if (condition === true) { alert('Passed!'); }
+
+// 👍 좋음
+if (condition === true) {
+  alert('Passed!');
+}
+```
+
+* 왼쪽 곱슬 브레이스(`{`)는 복합 문을 시작하는 선의 끝에 있어야 합니다.
+* 오른쪽 곱슬 브레이스(`}`)는 인단트에 맞춰서 왼쪽 곱슬 브레이스(`}`)의 시작 라인에 맞춰 줍니다.
+
+````typescript
+// ✋ 나쁨
+if (condition === true)
+{
+  alert('Passed!');
+}
+
+// 👍 좋음
+if (condition === true) {
+  alert('Passed!');
+}
+````
+
+* 한줄로 표현이 가능한 브레이스(`{}`)라도 브레이스를 사용해 줍니다.
+  * 복잡문장 주변에 브레이스를 사용하지 않으면 실수가 생기기 쉽습니다.
+
+```typescript
+// ✋ 나쁨
+if (condition === true) alert('Passed!');
+
+// ✋ 나쁨
+if (condition === true)
+  alert('Passed!');
+  return true;
+
+// 👍 좋음
+if (condition === true) {
+  alert('Passed!');
+  return true;
+}
+```
+
+### 리턴 (Return)
+
+* 리턴은 한줄에 표시해 줍니다.
+
+```typescript
+// ✋ 나쁨
+return
+    'Hello World!';
+
+// 👍 좋음
+return 'Hello World!';
+```
+
+* 가능하면 리턴은 먼저하는 것을 권장합니다.
+
+```typescript
+// ✋ 나쁨
+function getHighestNumber(a: number, b: number): number {
+    let out = b;
+
+    if(a >= b) {
+        out = a;
+    }
+
+    return out;
+}
+
+// 👍 좋음
+function getHighestNumber(a: number, b: number): number {
+    if(a >= b) {
+        return a;
+    }
+
+    return b;
+}
+```
+
+* 메서드나 함수에는 되도록이면 올바른 리턴 타입을 지정해 줍니다.
+
+```typescript
+// ✋ 나쁨
+function getPerson(name: string) {
+    return new Person(name);
+}
+
+// 👍 좋음
+function getPerson(name: string): Person {
+    return new Person(name);
+}
+```
+
+### 비교문 (If)
+
+* if문은 항상 명시적인 표현을 사용합니다. 
+
+```typescript
+// ✋ 나쁨
+if (!!str) {
+  return false;
+}
+
+// 👍 좋음
+if (typeof str === 'string') {
+  return false;
+}
+```
+
+* if문도 복합문과 같은 형태로 표현합니다.
+
+```typescript
+if (/* condition */) {
+    // ...
+}
+
+if (/* condition */) {
+    // ...
+} else {
+    // ...
+}
+
+if (/* condition */) {
+    // ...
+} else if (/* condition */) {
+    // ...
+} else {
+    // ...
+}
+```
+
+* 되도록이면 `===`와 `!==` 연산자를 사용합니다.
+  * `==`와 `!=`연산자는 타입을 무시해서 문제가 발생 할 수 있습니다.
+
+### 객체와 배열 리터럴 (Object, Array Literals)
+
+* `new Object()` 대신 `{}`를 사용합니다.
+* `new Array()` 대신 `[]`를 사용합니다.
+
+
+
+### TSLint
+
+* 항상 Linter를 사용해 줍니다.
+
+TSLint: https://github.com/palantir/tslint
 
 
 
