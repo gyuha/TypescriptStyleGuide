@@ -4,12 +4,42 @@
 
 [TOC]
 
+
+
 ## 들여쓰기 (Indentation)
 
 - 들여쓰기 단위를 `2칸`을 사용합니다.
 - 들여쓰기에 탭을 사용하지 않고 스페이스(space)를 사용합니다.
 
 
+
+## 사용하는 표기법
+
+- 3가지의 표기법을 용도별로 사용합니다.
+
+### 카멜 표기법 (Camel case)
+
+* 첫문자를 제외하고 이후 나오는 단어의 첫문자를 대문자로 표기하고 붙여쓰는 표기법
+
+* 띄어쓰기 대신 대문자로 단어를 구분하는 표기 방식
+
+  > 예: backgroundColor, typeName, iPhone
+
+### 파스칼 표기법 (Pascal case)
+
+* 첫문자를 제외하고 이후 나오는 단어의 첫문자를 대문자로 표기하고 붙여쓰는 표기법
+
+* 띄어쓰기 대신 대문자로 단어를 구분하는 표기 방식
+
+  > 예: BackgroundColor, TypeName, PowerPoint
+
+### 스네이크 표기법 (Snake case)
+
+- 단어를 언더바(`_`)로 구분하는 표기법
+
+- 띄어쓰기 대신 언더바를 구분하는 표기 방식
+
+  > 예: background_color, type_name, POWER_POINT
 
 
 
@@ -358,6 +388,16 @@ const m_index: number = 0;
 const startIndex: number = 0;
 ```
 
+### 폴더명 (Folder name)
+
+- 폴더 이름은 카멜케이스(lowerCamelCase)를 사용합니다.
+
+  > 소문자로 시작하고 복합어일 경우에는 중간에 새로운 단어의 첫자는 대문자로 표기합니다.
+  >
+  > 예) `newWorld`, `testDriver`, `helloWorld`
+
+### 파일명 (File name)
+
 
 
 ### 변수(Variable), 모듈(Module), 함수(Function) 명
@@ -489,6 +529,8 @@ alert('hello');
 ```
 
 ### 복합문 (Compound)
+
+- [K&R](https://namu.wiki/w/%EC%BD%94%EB%94%A9%20%EC%8A%A4%ED%83%80%EC%9D%BC#s-2.1) 스타일을 기본으로 사용합니다.
 
 - `{}`로 둘러싸인 문장의 목록
   - 둘러싸인 문장은 새로운 라인으로 시작 합니다.
@@ -663,4 +705,6 @@ TSLint: https://github.com/palantir/tslint
 * [Microsoft coding guidelines](https://github.com/microsoft/TypeScript/wiki/Coding-guidelines)
 * [Angular coding style guide](https://angular.io/guide/styleguide)
 * [adidas TypeScript coding guidelines](https://adidas.github.io/contributing/typescript-coding-guidelines/)
+* [코딩 스타일](https://namu.wiki/w/코딩 스타일)
+* 
 
