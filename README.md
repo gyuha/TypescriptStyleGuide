@@ -283,12 +283,12 @@ let c = 4;
 
 ```typescript
 // ✋ 나쁨
-함수 foo () {
+function foo (): string {
   // ...
 }
 
 // 👍 좋음
-함수 foo () {
+function foo(): string {
   // ...
 }
 ```
