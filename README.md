@@ -388,18 +388,18 @@ const startIndex: number = 0;
 
 ### 폴더명 (Folder name)
 
-- 폴더 이름은 [카멜표기법(camelCase)](#카멜-표기법-(camel-case))를 사용합니다.
+- 폴더 이름은 [카멜표기법(camelCase)](#카멜-표기법-camel-case)를 사용합니다.
 
 ### 파일명 (File name)
 
-- 클래스(class)가 포함된 파일은 클래스명을 따라갑니다. 클래스는 [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))를 사용합니다.
-- 그외 파일은  [카멜표기법(camelCase)](#카멜-표기법-(camel-case))를 사용합니다.
+- 클래스(class)가 포함된 파일은 클래스명을 따라갑니다. 클래스는 [파스칼 표기법(PascalCase)](#파스칼-표기법-pascal-case)를 사용합니다.
+- 그외 파일은  [카멜표기법(camelCase)](#카멜-표기법-camel-case)를 사용합니다.
 
 
 
 ### 변수(Variable), 모듈(Module), 함수(Function) 명
 
-- 변수, 모듈, 함수 명에는  [카멜표기법(camelCase)](#카멜-표기법-(camel-case))을 사용합니다.
+- 변수, 모듈, 함수 명에는  [카멜표기법(camelCase)](#카멜-표기법-camel-case)을 사용합니다.
 
 ### 변수 선언
 
@@ -428,7 +428,7 @@ let numbers: number[] = [];
 
 ### 클래스 (Class)
 
-* 클래스명은 [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))을 사용합니다.
+* 클래스명은 [파스칼 표기법(PascalCase)](#파스칼-표기법-pascal-case)을 사용합니다.
 
 * 메서드의 상단에는 1줄 이상의 빈줄을 추가합니다.
 
@@ -452,7 +452,7 @@ class Rect {
 
 ### 네임스페이스 (Namespace)
 
-* [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))를 따릅니다.
+* [파스칼 표기법(PascalCase)](#파스칼-표기법-pascal-case)를 따릅니다.
 
 ```typescript
 // ✋ 나쁨
@@ -466,7 +466,7 @@ namespace Foo {
 
 ### 인터페이스 (Interface)
 
-- 인터페이스는 [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))를 사용합니다.
+- 인터페이스는 [파스칼 표기법(PascalCase)](#파스칼-표기법-pascal-case)를 사용합니다.
 
 - 인터페이스의 대문자 `I`를 프리픽스로 사용하지 않습니다.
 
@@ -484,8 +484,8 @@ interface IPerson {
 
 ### 열거형 (Enum)
 
-* [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))를 따릅니다.
-* 열거형의 멤버 또한 [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))를 따릅니다.
+* [파스칼 표기법(PascalCase)](#파스칼-표기법-pascal-case)를 따릅니다.
+* 열거형의 멤버 또한 [파스칼 표기법(PascalCase)](#파스칼-표기법-pascal-case)를 따릅니다.
 
 ```typescript
 // ✋ 나쁨
