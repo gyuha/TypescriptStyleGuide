@@ -85,14 +85,14 @@ function getGreeting(name: string): string {
   > 함수나 반복문의 바로 다음에 나오는 줄에서는 빈줄을 추가해 주지 않아도 됩니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 let lines: string[]; // 파일에서 읽은 내용.
 
 // 👍 좋음
 // 파일에서 읽은 내용.
 let lines: string[];
 
-// ✋ 나쁨
+// ❌ 나쁨
 function walkFor(name: string, millis: number): void {
   console.log(name + '님이 걷고 있습니다.');
   // 걸음이 멈출때 까지 대기
@@ -138,28 +138,28 @@ function walkFor(name: string, millis: number): void {
 - 템플릿 리터럴을 사용 할 때만 템플릿 스트링(template strings) ${}를 사용합니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 let greeting = "Hello World";
 
 // 👍 좋음
 let greeting = 'Hello World';
 
-// ✋ 나쁨
+// ❌ 나쁨
 let phrase = 'It\'s Friday!';
 
 // 👍 좋음
 let phrase = "It's Friday!";
 
-// ✋ 나쁨
+// ❌ 나쁨
 let html = "<div class='bold'>Hello World</div>";
 
-// ✋ 나쁨
+// ❌ 나쁨
 let html = '<div class=\'bold\'>Hello World</div>';
 
 // 👍 좋음
 let html = '<div class="bold">Hello World</div>';
 
-// ✋ 나쁨
+// ❌ 나쁨
 let template = `string text string text`;
 
 // 👍 좋음
@@ -176,14 +176,14 @@ let template = `string text ${expression} string text`;
 - 배열이나 객체에는 항상 추가 콤마를 사용합니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 const person = {
   firstName: 'John'
 , lastname: 'Doe'
 , email: 'johndoe@mail.com'
 };
 
-// ✋ 나쁨
+// ❌ 나쁨
 const person = {
   firstName: 'John',
   lastname: 'Doe',
@@ -247,7 +247,7 @@ class Rect {
 - 작은 범위(smaller scope) 내에서 전역 범위(global scope)의 변수를 정의해서는 안됩니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 function add(a: number, b: number): number {
   // c 는 전역 범위 변수 입니다.
   c = 6;
@@ -259,12 +259,12 @@ function add(a: number, b: number): number {
 - 각 변수를 선언 할 때는 줄바꿈을 해 줍니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 let a = 2,
     b = 2,
     c = 4;
     
-// ✋ 나쁨
+// ❌ 나쁨
 let a = b = 2, c = 4;
 
 // 👍 좋음
@@ -282,7 +282,7 @@ let c = 4;
 - 하나 개 오른쪽 괄호 사이의 공간`)`와 문 본문을 시작하는 곱슬 왼쪽 `{`중괄호가 있어야 합니다.
 
 ```typescript
-// ✋ 나쁨
+// 🚨 나쁨
 function foo (): string {
   // ...
 }
@@ -298,7 +298,7 @@ function foo(): string {
 - 오른쪽 중괄호는`}`함수 문을 시작 왼쪽 중괄호 `{`포함하는 행과 일치해야 합니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 function foo(): string {
   return 'foo';}
 
@@ -311,8 +311,8 @@ function foo(): string {
 - 모든 fat-arrow / lambda 함수는 함수 매개 변수 주위에 괄호 ()가 있어야 합니다.
 
 ```typescript
-// ✋ 나쁨
-clickAlert() {
+// ❌ 나쁨
+function clickAlert() {
   let element = document.querySelector('div');
 
   this.foo = 'foo';
@@ -324,7 +324,7 @@ clickAlert() {
 }
 
 // 👍 좋음
-clickAlert() {
+function clickAlert() {
   let element = document.querySelector('div');
 
   this.foo = 'foo';
@@ -339,10 +339,10 @@ clickAlert() {
 - 항상`{}`중괄호와 함수 블록을 둘러 쌓아 줍니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 element.addEventListener('submit', ev => ev.preventDefault());
 
-// ✋ 나쁨
+// ❌ 나쁨
 element.addEventListener('submit', (ev: Event) => ev.preventDefault());
 
 // 👍 좋음
@@ -355,7 +355,7 @@ element.addEventListener('submit', (ev: Event) => {
 - 명령문 본문을 시작하는 `=>`와 왼쪽 중괄호 `{` 사이에는 공백이 있어야 합니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 element.addEventListener('click', (ev: Event)=>{alert('foo');});
 
 // 👍 좋음
@@ -373,13 +373,13 @@ element.addEventListener('click', (ev: Event) => {
 - 가능하다면 단어를 전체적으로 구성해서 사용합니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 const START_INDEX: number = 0;
 
-// ✋ 나쁨
+// ❌ 나쁨
 const stIndex: number = 0;
 
-// ✋ 나쁨
+// ❌ 나쁨
 const m_index: number = 0;
 
 // 👍 좋음
@@ -414,10 +414,10 @@ const startIndex: number = 0;
 - 배열은 `Array<type>` 대신 `type[]`형식으로 사용합니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 let numbers = [];
 
-// ✋ 나쁨
+// ❌ 나쁨
 let numbers: Array<number> = [];
 
 // 👍 좋음
@@ -455,7 +455,7 @@ class Rect {
 * [파스칼 표기법(PascalCase)](#파스칼-표기법-pascal-case)를 따릅니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 namespace foo {
 }
 
@@ -488,7 +488,7 @@ interface IPerson {
 * 열거형의 멤버 또한 [파스칼 표기법(PascalCase)](#파스칼-표기법-pascal-case)를 따릅니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 enum color {
     red
 }
@@ -499,7 +499,18 @@ enum Color {
 }
 ```
 
+### 타입 (type)
 
+* 열거형과 같이 [파스칼 표기법(PascalCase)](#파스칼-표기법-pascal-case)를 따릅니다.
+* 타입의 멤버 또한 [파스칼 표기법(PascalCase)](#파스칼-표기법-pascal-case)를 따릅니다.
+
+```typescript
+// ❌ 나쁨
+type mode = 'classic' | 'battle' | 'teamBattle';
+
+// 👍 좋음
+type Modes = 'Classic' | 'Battle' | 'TeamBattle';
+```
 
 
 
@@ -510,7 +521,7 @@ enum Color {
 - 모든 문장의 뒤에는 세미콜론(`;`)을 넣어 줍니다. 
 
 ``` typescript
-// ✋ 나쁨
+// ❌ 나쁨
 alert('hello')
 
 // 👍 좋음
@@ -525,7 +536,7 @@ alert('hello');
   - 둘러싸인 문장은 새로운 라인으로 시작 합니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 if (condition === true) { alert('Passed!'); }
 
 // 👍 좋음
@@ -538,7 +549,7 @@ if (condition === true) {
 * 오른쪽 곱슬 브레이스(`}`)는 인단트에 맞춰서 왼쪽 곱슬 브레이스(`}`)의 시작 라인에 맞춰 줍니다.
 
 ````typescript
-// ✋ 나쁨
+// ❌ 나쁨
 if (condition === true)
 {
   alert('Passed!');
@@ -554,10 +565,10 @@ if (condition === true) {
   * 복잡문장 주변에 브레이스를 사용하지 않으면 실수가 생기기 쉽습니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 if (condition === true) alert('Passed!');
 
-// ✋ 나쁨
+// ❌ 나쁨
 if (condition === true)
   alert('Passed!');
   return true;
@@ -574,7 +585,7 @@ if (condition === true) {
 * 리턴은 한줄에 표시해 줍니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 return
     'Hello World!';
 
@@ -582,10 +593,10 @@ return
 return 'Hello World!';
 ```
 
-* 가능하면 리턴은 먼저하는 것을 권장합니다.
+* 가능하면 리턴은 먼저 하는 것을 권장합니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 function getHighestNumber(a: number, b: number): number {
     let out = b;
 
@@ -606,10 +617,10 @@ function getHighestNumber(a: number, b: number): number {
 }
 ```
 
-* 메서드나 함수에는 되도록이면 올바른 리턴 타입을 지정해 줍니다.
+* 메서드 또는 함수에는 되도록이면 올바른 리턴 타입을 지정해 줍니다.
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 function getPerson(name: string) {
     return new Person(name);
 }
@@ -625,7 +636,7 @@ function getPerson(name: string): Person {
 * if문은 항상 명시적인 표현을 사용합니다. 
 
 ```typescript
-// ✋ 나쁨
+// ❌ 나쁨
 if (!!str) {
   return false;
 }
