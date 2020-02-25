@@ -4,8 +4,6 @@
 
 [TOC]
 
-
-
 ## 들여쓰기 (Indentation)
 
 - 들여쓰기 단위를 `2칸`을 사용합니다.
@@ -279,9 +277,9 @@ let c = 4;
 
 ## 함수 선언 (Function Declaration)
 
-- 사용되기 전에 모든 기능을 선언해야합니다.
-- 함수의 이름과 왼쪽 괄호`(`의 매개 변수의 목록 사이에는 공백이 없어야합니다.
-- 하나 개 오른쪽 괄호 사이의 공간`)`와 문 본문을 시작하는 곱슬 왼쪽 `{`중괄호가 있어야합니다.
+- 사용되기 전에 모든 기능을 선언해야 합니다.
+- 함수의 이름과 왼쪽 괄호`(`의 매개 변수의 목록 사이에는 공백이 없어야 합니다.
+- 하나 개 오른쪽 괄호 사이의 공간`)`와 문 본문을 시작하는 곱슬 왼쪽 `{`중괄호가 있어야 합니다.
 
 ```typescript
 // ✋ 나쁨
@@ -295,9 +293,9 @@ let c = 4;
 }
 ```
 
-- 오른쪽 중괄호는`}`새 행에 있어야합니다.
+- 오른쪽 중괄호는`}`새 행에 있어야 합니다.
 
-- 오른쪽 중괄호는`}`함수 문을 시작 왼쪽 중괄호 `{`포함하는 행과 일치해야합니다.
+- 오른쪽 중괄호는`}`함수 문을 시작 왼쪽 중괄호 `{`포함하는 행과 일치해야 합니다.
 
 ```typescript
 // ✋ 나쁨
@@ -310,7 +308,7 @@ function foo(): string {
 }
 ```
 
-- 모든 fat-arrow / lambda 함수는 함수 매개 변수 주위에 괄호 ()가 있어야합니다.
+- 모든 fat-arrow / lambda 함수는 함수 매개 변수 주위에 괄호 ()가 있어야 합니다.
 
 ```typescript
 // ✋ 나쁨
@@ -338,7 +336,7 @@ clickAlert() {
 }
 ```
 
-- 항상`{}`중괄호와 펑션 블록을 둘러 쌓아 줍니다.
+- 항상`{}`중괄호와 함수 블록을 둘러 쌓아 줍니다.
 
 ```typescript
 // ✋ 나쁨
@@ -353,8 +351,8 @@ element.addEventListener('submit', (ev: Event) => {
 });
 ```
 
-- 오른쪽 괄호 `()`와 `=>` 사이에는 공백이 있어야합니다.
-- 명령문 본문을 시작하는 `=>`와 왼쪽 중괄호 `{` 사이에는 공백이 있어야합니다.
+- 오른쪽 괄호 `()`와 `=>` 사이에는 공백이 있어야 합니다.
+- 명령문 본문을 시작하는 `=>`와 왼쪽 중괄호 `{` 사이에는 공백이 있어야 합니다.
 
 ```typescript
 // ✋ 나쁨
@@ -370,7 +368,7 @@ element.addEventListener('click', (ev: Event) => {
 
 ## 작명 (Name)
 
-- 모든 변수 및 함수 이름은 영숫자 `A-Z`, `a-z`, `0-9` 및 밑줄 `_` 문자로 구성되어야합니다.
+- 모든 변수 및 함수 이름은 영숫자 `A-Z`, `a-z`, `0-9` 및 밑줄 `_` 문자로 구성되어야 합니다.
 - 앞에 언더바(`_`)를 사용하는 프리픽스는 사용하지 않습니다.
 - 가능하다면 단어를 전체적으로 구성해서 사용합니다.
 
@@ -390,23 +388,18 @@ const startIndex: number = 0;
 
 ### 폴더명 (Folder name)
 
-- 폴더 이름은 카멜케이스(lowerCamelCase)를 사용합니다.
-
-  > 소문자로 시작하고 복합어일 경우에는 중간에 새로운 단어의 첫자는 대문자로 표기합니다.
-  >
-  > 예) `newWorld`, `testDriver`, `helloWorld`
+- 폴더 이름은 [카멜표기법(camelCase)](#카멜-표기법-(camel-case))를 사용합니다.
 
 ### 파일명 (File name)
+
+- 클래스(class)가 포함된 파일은 클래스명을 따라갑니다. 클래스는 [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))를 사용합니다.
+- 그외 파일은  [카멜표기법(camelCase)](#카멜-표기법-(camel-case))를 사용합니다.
 
 
 
 ### 변수(Variable), 모듈(Module), 함수(Function) 명
 
-- 변수, 모듈, 함수 명에는 카멜케이스(lowerCamelCase)를 사용합니다.
-
-  > 소문자로 시작하고 복합어일 경우에는 중간에 새로운 단어의 첫자는 대문자로 표기합니다.
-  >
-  > 예) `newWorld`, `testDriver`, `helloWorld`
+- 변수, 모듈, 함수 명에는  [카멜표기법(camelCase)](#카멜-표기법-(camel-case))을 사용합니다.
 
 ### 변수 선언
 
@@ -435,11 +428,7 @@ let numbers: number[] = [];
 
 ### 클래스 (Class)
 
-* 클래스명은 파스칼케이싱(Pascal Casing)을 사용합니다.
-
-  > 대문자로 시작하고 복합어일 경우에는 중간에 새로운 단어의 첫자는 대문자로 표기합니다.
-  >
-  > 예) `NewWorld`, `TestDriver`, `HelloWorld` 
+* 클래스명은 [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))을 사용합니다.
 
 * 메서드의 상단에는 1줄 이상의 빈줄을 추가합니다.
 
@@ -463,7 +452,7 @@ class Rect {
 
 ### 네임스페이스 (Namespace)
 
-* 파스칼케이스(`PascalCase`)를 따릅니다.
+* [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))를 따릅니다.
 
 ```typescript
 // ✋ 나쁨
@@ -477,7 +466,7 @@ namespace Foo {
 
 ### 인터페이스 (Interface)
 
-- 인터페이스는 파스칼케이스(PascalCase)를 사용합니다.
+- 인터페이스는 [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))를 사용합니다.
 
 - 인터페이스의 대문자 `I`를 프리픽스로 사용하지 않습니다.
 
@@ -495,8 +484,8 @@ interface IPerson {
 
 ### 열거형 (Enum)
 
-* 파스칼케이스(`PascalCase`)를 따릅니다.
-* 열거형의 멤버 또한 파스칼 케이스를 따릅니다.
+* [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))를 따릅니다.
+* 열거형의 멤버 또한 [파스칼 표기법(PascalCase)](#파스칼-표기법-(pascal-case))를 따릅니다.
 
 ```typescript
 // ✋ 나쁨
@@ -706,5 +695,4 @@ TSLint: https://github.com/palantir/tslint
 * [Angular coding style guide](https://angular.io/guide/styleguide)
 * [adidas TypeScript coding guidelines](https://adidas.github.io/contributing/typescript-coding-guidelines/)
 * [코딩 스타일](https://namu.wiki/w/코딩 스타일)
-* 
 
