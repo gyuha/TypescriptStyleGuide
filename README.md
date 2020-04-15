@@ -475,7 +475,7 @@ namespace Foo {
 - 인터페이스는 public 멤버만을 사용하며, `protected`와 `private` 멤버에서는 사용하지 않습니다.
 
 ```typescript
-interface IPerson {
+interface Person {
     firstName: string;
     lastName: string;
     toString(): string;
@@ -705,5 +705,5 @@ TSLint: https://github.com/palantir/tslint
 * [Microsoft coding guidelines](https://github.com/microsoft/TypeScript/wiki/Coding-guidelines)
 * [Angular coding style guide](https://angular.io/guide/styleguide)
 * [adidas TypeScript coding guidelines](https://adidas.github.io/contributing/typescript-coding-guidelines/)
-* [코딩 스타일](https://namu.wiki/w/코딩 스타일)
+* [코딩 스타일](https://namu.wiki/w/%EC%BD%94%EB%94%A9%20%EC%8A%A4%ED%83%80%EC%9D%BC)
 
