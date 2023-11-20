@@ -381,16 +381,16 @@ element.addEventListener('click', (ev: Event) => {
 
 ```typescript
 // ❌ 나쁨
-const START_INDEX: number = 0;
+let START_INDEX: number = 0;
 
 // ❌ 나쁨
-const stIndex: number = 0;
+let stIndex: number = 0;
 
 // ❌ 나쁨
-const m_index: number = 0;
+let m_index: number = 0;
 
 // 👍 좋음
-const startIndex: number = 0;
+let startIndex: number = 0;
 ```
 
 ### 폴더명 (Folder name)
