@@ -12,29 +12,39 @@
 
 - 3가지의 표기법을 용도별로 사용합니다.
 
-### 카멜 표기법 (Camel case)
+### 카멜 표기법 (camelCase)
 
 * 첫문자를 제외하고 이후 나오는 단어의 첫문자를 대문자로 표기하고 붙여쓰는 표기법
 
 * 띄어쓰기 대신 대문자로 단어를 구분하는 표기 방식
 
   > 예: backgroundColor, typeName, iPhone
+#### 주요 용도
+- 변수명
+- 클래스 메서드
 
-### 파스칼 표기법 (Pascal case)
+### 파스칼 표기법 (PascalCase)
 
 * 첫문자를 제외하고 이후 나오는 단어의 첫문자를 대문자로 표기하고 붙여쓰는 표기법
 
 * 띄어쓰기 대신 대문자로 단어를 구분하는 표기 방식
 
   > 예: BackgroundColor, TypeName, PowerPoint
+#### 주요 사용
+- 클래스가 포함된 파일
+- React 또는 Vue의 경우 컴포넌트 파일
 
-### 스네이크 표기법 (Snake case)
+
+### 스네이크 표기법 (SNAKE_CASE)
 
 - 단어를 언더바(`_`)로 구분하는 표기법
 
 - 띄어쓰기 대신 언더바를 구분하는 표기 방식
 
   > 예: background_color, type_name, POWER_POINT
+
+#### 주요 용도
+- 공통이 되는 변경되지 않는 변수(const)
 
 
 
