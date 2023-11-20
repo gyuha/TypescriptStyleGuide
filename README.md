@@ -1,9 +1,6 @@
 # Typescript Style Guide
 
 
-
-[TOC]
-
 ## 들여쓰기 (Indentation)
 
 - 들여쓰기 단위를 `2칸`을 사용합니다.
